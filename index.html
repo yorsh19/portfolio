@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yorsh Ramos | Full Stack Developer</title>
-  <meta name="description" content="Portfolio de Yorsh Ramos — Full Stack Developer especializado en JavaScript, TypeScript, Java y Python. Estudiante de Ingeniería de Sistemas en la UNMSM, Lima, Perú." />
+  <meta name="description" content="Portfolio de Yorsh Ramos — Full Stack Developer especializado en Java, Spring Boot, Angular y sistemas móviles Android. Lima, Perú." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
@@ -22,35 +22,22 @@
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
 
-    /* NAV */
     nav {
       position: fixed; top: 0; width: 100%; z-index: 100;
-      background: rgba(15,15,26,0.9);
-      backdrop-filter: blur(10px);
+      background: rgba(15,15,26,0.9); backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
-      padding: 1rem 2rem;
-      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;
     }
     .nav-logo { font-weight: 800; font-size: 1.3rem; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     .nav-links { display: flex; gap: 2rem; list-style: none; }
     .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
     .nav-links a:hover { color: var(--primary); }
 
-    /* HERO */
     #hero {
-      min-height: 100vh;
-      display: flex; align-items: center; justify-content: center;
-      text-align: center; padding: 6rem 2rem 2rem;
-      position: relative;
-      overflow: hidden;
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      text-align: center; padding: 6rem 2rem 2rem; position: relative; overflow: hidden;
     }
     #hero::before {
       content: ''; position: absolute; inset: 0;
@@ -66,86 +53,55 @@
     h1 span { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     .hero-sub { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem; }
     .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .btn {
-      padding: 0.75rem 1.75rem; border-radius: 8px; font-size: 0.95rem;
-      font-weight: 600; text-decoration: none; transition: all 0.2s; cursor: pointer; border: none;
-    }
+    .btn { padding: 0.75rem 1.75rem; border-radius: 8px; font-size: 0.95rem; font-weight: 600; text-decoration: none; transition: all 0.2s; cursor: pointer; border: none; }
     .btn-primary { background: var(--gradient); color: white; }
     .btn-primary:hover { opacity: 0.85; transform: translateY(-2px); }
     .btn-outline { border: 1px solid var(--border); color: var(--text); background: transparent; }
     .btn-outline:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-2px); }
 
-    /* SECTIONS */
     section { padding: 5rem 2rem; }
     .container { max-width: 1100px; margin: 0 auto; }
-    .section-title {
-      font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem;
-      background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    }
+    .section-title { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     .section-sub { color: var(--text-muted); margin-bottom: 3rem; }
 
-    /* ABOUT */
     #about .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
     .about-text p { color: var(--text-muted); margin-bottom: 1rem; }
     .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
-    .stat-card {
-      background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
-      padding: 1.25rem; text-align: center;
-    }
+    .stat-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; text-align: center; }
     .stat-num { font-size: 2rem; font-weight: 800; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     .stat-label { color: var(--text-muted); font-size: 0.85rem; }
 
-    /* SKILLS */
     #skills { background: var(--bg-card2); }
-    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-    .skill-category {
-      background: var(--bg-card); border: 1px solid var(--border);
-      border-radius: 16px; padding: 1.5rem;
-      transition: border-color 0.2s;
-    }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+    .skill-category { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; transition: border-color 0.2s; }
     .skill-category:hover { border-color: var(--primary); }
     .skill-category h3 { font-size: 0.85rem; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; }
     .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .tag {
-      background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.2);
-      color: var(--text); padding: 0.3rem 0.8rem; border-radius: 999px; font-size: 0.8rem;
-    }
+    .tag { background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.2); color: var(--text); padding: 0.3rem 0.8rem; border-radius: 999px; font-size: 0.8rem; }
 
-    /* PROJECTS */
     .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
-    .project-card {
-      background: var(--bg-card); border: 1px solid var(--border);
-      border-radius: 16px; padding: 1.75rem;
-      transition: all 0.2s;
-    }
+    .project-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.75rem; transition: all 0.2s; display: flex; flex-direction: column; gap: 0.75rem; }
     .project-card:hover { border-color: var(--primary); transform: translateY(-4px); }
-    .project-icon { font-size: 2rem; margin-bottom: 1rem; }
-    .project-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
-    .project-card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem; }
+    .project-header { display: flex; align-items: center; gap: 0.75rem; }
+    .project-icon { font-size: 1.75rem; }
+    .project-card h3 { font-size: 1.1rem; }
+    .project-badge { font-size: 0.7rem; padding: 0.15rem 0.6rem; border-radius: 999px; font-weight: 600; }
+    .badge-prod { background: rgba(34,197,94,0.15); color: #4ade80; border: 1px solid rgba(34,197,94,0.3); }
+    .badge-wip { background: rgba(251,191,36,0.15); color: #fbbf24; border: 1px solid rgba(251,191,36,0.3); }
+    .badge-edu { background: rgba(99,102,241,0.15); color: #a5b4fc; border: 1px solid rgba(99,102,241,0.3); }
+    .project-card p { color: var(--text-muted); font-size: 0.9rem; flex: 1; }
     .project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-    .project-tag {
-      background: rgba(6,182,212,0.1); border: 1px solid rgba(6,182,212,0.2);
-      color: var(--secondary); padding: 0.2rem 0.6rem; border-radius: 999px; font-size: 0.75rem;
-    }
+    .project-tag { background: rgba(6,182,212,0.1); border: 1px solid rgba(6,182,212,0.2); color: var(--secondary); padding: 0.2rem 0.6rem; border-radius: 999px; font-size: 0.75rem; }
+    .project-links { display: flex; gap: 0.75rem; margin-top: 0.25rem; }
+    .project-link { font-size: 0.8rem; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 0.3rem; }
+    .project-link:hover { text-decoration: underline; }
 
-    /* CONTACT */
     #contact { background: var(--bg-card2); text-align: center; }
     .contact-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
-    .contact-link {
-      display: flex; align-items: center; gap: 0.5rem;
-      padding: 0.75rem 1.5rem; border-radius: 10px;
-      background: var(--bg-card); border: 1px solid var(--border);
-      color: var(--text); text-decoration: none; font-size: 0.9rem;
-      transition: all 0.2s;
-    }
+    .contact-link { display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; border-radius: 10px; background: var(--bg-card); border: 1px solid var(--border); color: var(--text); text-decoration: none; font-size: 0.9rem; transition: all 0.2s; }
     .contact-link:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-2px); }
 
-    /* FOOTER */
-    footer {
-      text-align: center; padding: 2rem;
-      color: var(--text-muted); font-size: 0.85rem;
-      border-top: 1px solid var(--border);
-    }
+    footer { text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid var(--border); }
 
     @media (max-width: 768px) {
       .nav-links { display: none; }
@@ -170,7 +126,7 @@
   <div class="hero-content">
     <div class="hero-tag">👋 Disponible para proyectos</div>
     <h1>Hola, soy <span>Yorsh Ramos</span></h1>
-    <p class="hero-sub">Full Stack Developer | Estudiante de Ingeniería de Sistemas en la UNMSM · Lima, Perú 🇵🇪</p>
+    <p class="hero-sub">Full Stack Developer · Java · Spring Boot · Angular · Android/Kotlin<br>Estudiante de Ingeniería de Sistemas en la UNMSM · Lima, Perú 🇵🇪</p>
     <div class="hero-btns">
       <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
       <a href="#contact" class="btn btn-outline">Contactar</a>
@@ -185,14 +141,14 @@
     <p class="section-sub">Un poco de mi historia y experiencia</p>
     <div class="about-grid">
       <div class="about-text">
-        <p>Soy desarrollador Full Stack con experiencia construyendo aplicaciones web y móviles de alto impacto. Actualmente estudio Ingeniería de Sistemas en la Universidad Nacional Mayor de San Marcos (UNMSM).</p>
-        <p>He trabajado en proyectos reales para empresas como <strong>Kalex-Soft</strong> y <strong>NovoClinic Sistemas TI</strong>, desarrollando desde ERPs hasta aplicaciones bancarias y sistemas de gestión hospitalaria.</p>
-        <p>Me apasiona el código limpio, la arquitectura de software y las soluciones que generan impacto real en las personas.</p>
+        <p>Soy desarrollador Full Stack con experiencia construyendo plataformas SaaS, sistemas empresariales y aplicaciones de alta disponibilidad. Actualmente estudio Ingeniería de Sistemas en la <strong>Universidad Nacional Mayor de San Marcos (UNMSM)</strong>.</p>
+        <p>He trabajado como freelance en proyectos reales como <strong>CardsBox Courier</strong> (plataforma de envíos USA→Ecuador con +100k envíos) y <strong>MedKalex</strong> (SaaS de gestión médica en Perú), y colaborado con empresas como <strong>Kalex-Soft</strong> y <strong>NovoClinic Sistemas TI</strong>.</p>
+        <p>Me apasiona el código limpio, la arquitectura de software y las soluciones que generan impacto real.</p>
       </div>
       <div class="about-stats">
-        <div class="stat-card"><div class="stat-num">56+</div><div class="stat-label">Repositorios</div></div>
+        <div class="stat-card"><div class="stat-num">100k+</div><div class="stat-label">Envíos CardsBox</div></div>
+        <div class="stat-card"><div class="stat-num">2</div><div class="stat-label">Productos en producción</div></div>
         <div class="stat-card"><div class="stat-num">5+</div><div class="stat-label">Años codificando</div></div>
-        <div class="stat-card"><div class="stat-num">2</div><div class="stat-label">Empresas</div></div>
         <div class="stat-card"><div class="stat-num">🎓</div><div class="stat-label">UNMSM · ISI</div></div>
       </div>
     </div>
@@ -206,39 +162,40 @@
     <p class="section-sub">Tecnologías con las que trabajo</p>
     <div class="skills-grid">
       <div class="skill-category">
-        <h3>🎨 Frontend</h3>
+        <h3>⚙️ Backend</h3>
         <div class="tags">
-          <span class="tag">JavaScript</span><span class="tag">TypeScript</span>
-          <span class="tag">React</span><span class="tag">HTML5</span><span class="tag">CSS3</span>
+          <span class="tag">Java 17</span><span class="tag">Spring Boot</span>
+          <span class="tag">Python</span><span class="tag">REST APIs</span>
+          <span class="tag">OAuth2</span>
         </div>
       </div>
       <div class="skill-category">
-        <h3>⚙️ Backend</h3>
+        <h3>🎨 Frontend</h3>
         <div class="tags">
-          <span class="tag">Java</span><span class="tag">Spring Boot</span>
-          <span class="tag">Python</span><span class="tag">Node.js</span>
+          <span class="tag">Angular 20</span><span class="tag">TypeScript</span>
+          <span class="tag">JavaScript</span><span class="tag">Tailwind CSS</span>
+          <span class="tag">HTML5</span>
         </div>
       </div>
       <div class="skill-category">
         <h3>📱 Mobile</h3>
         <div class="tags">
-          <span class="tag">Flutter</span><span class="tag">Dart</span>
-          <span class="tag">Android</span><span class="tag">React Native</span>
+          <span class="tag">Android</span><span class="tag">Kotlin</span>
+          <span class="tag">Android Studio</span><span class="tag">Firebase</span>
         </div>
       </div>
       <div class="skill-category">
         <h3>🗄️ Base de Datos</h3>
         <div class="tags">
-          <span class="tag">PostgreSQL</span><span class="tag">MySQL</span>
+          <span class="tag">PostgreSQL</span><span class="tag">Redis</span>
           <span class="tag">PL/pgSQL</span>
         </div>
       </div>
       <div class="skill-category">
         <h3>🛠️ DevOps & Tools</h3>
         <div class="tags">
-          <span class="tag">Git</span><span class="tag">GitHub</span>
-          <span class="tag">Docker</span><span class="tag">REST APIs</span>
-          <span class="tag">OAuth2</span>
+          <span class="tag">Docker</span><span class="tag">Git</span>
+          <span class="tag">GitHub</span><span class="tag">Linux</span>
         </div>
       </div>
     </div>
@@ -249,56 +206,98 @@
 <section id="projects">
   <div class="container">
     <h2 class="section-title">Proyectos</h2>
-    <p class="section-sub">Algunos proyectos en los que he trabajado</p>
+    <p class="section-sub">Plataformas y sistemas que he construido</p>
     <div class="projects-grid">
+
       <div class="project-card">
-        <div class="project-icon">🃏</div>
-        <h3>CardsBox</h3>
-        <p>Plataforma completa de gestión de tarjetas con app móvil, backend y frontend. Arquitectura de microservicios.</p>
+        <div class="project-header">
+          <div class="project-icon">📦</div>
+          <div>
+            <h3>CardsBox Courier</h3>
+            <span class="project-badge badge-prod">🚀 En producción</span>
+          </div>
+        </div>
+        <p>Plataforma de courier freelance que permite a usuarios de Ecuador comprar en tiendas de EE.UU. (Amazon, eBay, SHEIN, Temu, AliExpress) y recibir sus paquetes en 5-10 días hábiles. Más de <strong>100,000 envíos exitosos</strong>. La nueva versión incluye sistema de autenticación, cotizador en tiempo real y landing renovada.</p>
         <div class="project-tags">
-          <span class="project-tag">TypeScript</span><span class="project-tag">Java</span><span class="project-tag">Spring Boot</span>
+          <span class="project-tag">Java 17</span><span class="project-tag">Spring Boot</span>
+          <span class="project-tag">Angular 20</span><span class="project-tag">PostgreSQL</span>
+        </div>
+        <div class="project-links">
+          <a href="https://cardsbox.com.ec" target="_blank" class="project-link">🌐 App actual</a>
+          <a href="https://test.cardsbox-api.com" target="_blank" class="project-link">🔧 Nueva versión</a>
         </div>
       </div>
+
       <div class="project-card">
-        <div class="project-icon">🤖</div>
-        <h3>Jarvis</h3>
-        <p>Asistente personal con inteligencia artificial para automatización de tareas cotidianas.</p>
+        <div class="project-header">
+          <div class="project-icon">🏥</div>
+          <div>
+            <h3>MedKalex</h3>
+            <span class="project-badge badge-prod">🚀 En producción</span>
+          </div>
+        </div>
+        <p>Plataforma SaaS desarrollada desde cero para la gestión de consultorios médicos en Perú (odontología, pediatría y psicología). Agenda inteligente, historia clínica digital, recordatorios automáticos por WhatsApp, control de pagos, recetas digitales y dashboards estadísticos.</p>
         <div class="project-tags">
-          <span class="project-tag">Python</span><span class="project-tag">AI/ML</span>
+          <span class="project-tag">Java 17</span><span class="project-tag">Spring Boot</span>
+          <span class="project-tag">Angular 20</span><span class="project-tag">Python</span>
+          <span class="project-tag">Docker</span><span class="project-tag">Redis</span>
+          <span class="project-tag">PostgreSQL</span>
+        </div>
+        <div class="project-links">
+          <a href="https://medkalex.com" target="_blank" class="project-link">🌐 Landing</a>
+          <a href="https://app.medkalex.com" target="_blank" class="project-link">🔗 App</a>
         </div>
       </div>
+
       <div class="project-card">
-        <div class="project-icon">📊</div>
-        <h3>Trading Bot</h3>
-        <p>Bot de trading automatizado con estrategias de análisis técnico y gestión de riesgo.</p>
+        <div class="project-header">
+          <div class="project-icon">🏥</div>
+          <div>
+            <h3>ERP HIS ATR</h3>
+            <span class="project-badge badge-prod">✅ Completado</span>
+          </div>
+        </div>
+        <p>Sistema de información hospitalaria (HIS) con módulo de admisión, traslado y referencia para gestión clínica empresarial. Desarrollado para NovoClinic Sistemas TI.</p>
         <div class="project-tags">
-          <span class="project-tag">Python</span><span class="project-tag">Finance</span>
+          <span class="project-tag">Java</span><span class="project-tag">Spring Boot</span>
+          <span class="project-tag">PostgreSQL</span>
         </div>
       </div>
+
       <div class="project-card">
-        <div class="project-icon">🏥</div>
-        <h3>ERP HIS ATR</h3>
-        <p>Sistema de información hospitalaria (HIS) y módulo de gestión de admisión, traslado y referencia.</p>
+        <div class="project-header">
+          <div class="project-icon">🔐</div>
+          <div>
+            <h3>OAuth2 Authorization Server</h3>
+            <span class="project-badge badge-prod">✅ Completado</span>
+          </div>
+        </div>
+        <p>Servidor de autorización OAuth2 personalizado para gestión de accesos empresariales, integración con múltiples clientes y manejo de scopes y tokens JWT.</p>
         <div class="project-tags">
-          <span class="project-tag">Java</span><span class="project-tag">Spring Boot</span><span class="project-tag">PostgreSQL</span>
+          <span class="project-tag">Java</span><span class="project-tag">Spring Security</span>
+          <span class="project-tag">OAuth2</span><span class="project-tag">JWT</span>
         </div>
       </div>
+
       <div class="project-card">
-        <div class="project-icon">📱</div>
-        <h3>App Móvil DSMG — UNMSM</h3>
-        <p>Proyecto universitario del curso Desarrollo de Software en Movilidad Global en la UNMSM.</p>
+        <div class="project-header">
+          <div class="project-icon">📱</div>
+          <div>
+            <h3>App Móvil — DSMG UNMSM</h3>
+            <span class="project-badge badge-edu">🎓 En curso</span>
+          </div>
+        </div>
+        <p>Proyecto universitario del curso Desarrollo de Sistemas Móviles en la UNMSM. Aplicación Android nativa con Kotlin, integración con Firebase e Inteligencia Artificial.</p>
         <div class="project-tags">
-          <span class="project-tag">Flutter</span><span class="project-tag">Dart</span><span class="project-tag">Firebase</span>
+          <span class="project-tag">Android</span><span class="project-tag">Kotlin</span>
+          <span class="project-tag">Firebase</span><span class="project-tag">AI</span>
+          <span class="project-tag">Android Studio</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/yorsh19/261DSMG119200162" target="_blank" class="project-link">📁 Repositorio</a>
         </div>
       </div>
-      <div class="project-card">
-        <div class="project-icon">🔐</div>
-        <h3>OAuth2 Authorization Server</h3>
-        <p>Servidor de autorización OAuth2 personalizado para gestión de accesos empresariales.</p>
-        <div class="project-tags">
-          <span class="project-tag">Java</span><span class="project-tag">Spring Security</span><span class="project-tag">OAuth2</span>
-        </div>
-      </div>
+
     </div>
   </div>
 </section>
@@ -322,4 +321,4 @@
 </footer>
 
 </body>
-    </html>
+</html>
